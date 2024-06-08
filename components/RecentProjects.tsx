@@ -1,7 +1,6 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/PinContainer";
 
@@ -19,8 +18,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title="https://github.com/fons-sabalbosajr"
+              href="https://github.com/fons-sabalbosajr"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
@@ -66,10 +65,17 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-purple font-bold cursor-pointer"
+                  >
+                    <button className="bg-transparent border border-purple rounded-md px-3 py-1 mr-2 transition duration-300 hover:bg-purple hover:text-white">
+                      Check Live Site
+                    </button>
+                    <FaLocationArrow className="text-purple" />
+                  </a>
                 </div>
               </div>
             </PinContainer>
